@@ -41,7 +41,9 @@ function Navbar() {
     <header className="navbar">
       <div className="navbar__inner container">
 
-        {/* Logo */}
+        {/* =====================================================
+            LOGO
+            ===================================================== */}
         <Link
           to="/"
           className="navbar__logo"
@@ -57,15 +59,23 @@ function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="navbar__nav" aria-label="Main navigation">
+
+        {/* =====================================================
+            DESKTOP NAVIGATION
+            ===================================================== */}
+        <nav
+          className="navbar__nav"
+          aria-label="Main navigation"
+        >
           {navigation.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               end={item.path === "/"}
               className={({ isActive }) =>
-                `navbar__link ${isActive ? "navbar__link--active" : ""}`
+                `navbar__link ${
+                  isActive ? "navbar__link--active" : ""
+                }`
               }
             >
               {language === "en" ? item.en : item.sw}
@@ -73,16 +83,22 @@ function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop Actions */}
+
+        {/* =====================================================
+            DESKTOP ACTIONS
+            ===================================================== */}
         <div className="navbar__actions">
 
+          {/* Desktop Language Switcher */}
           <button
             type="button"
             className="navbar__language"
             onClick={toggleLanguage}
             aria-label="Change website language"
           >
-            <span className={language === "en" ? "active" : ""}>
+            <span
+              className={language === "en" ? "active" : ""}
+            >
               EN
             </span>
 
@@ -90,11 +106,15 @@ function Navbar() {
               /
             </span>
 
-            <span className={language === "sw" ? "active" : ""}>
+            <span
+              className={language === "sw" ? "active" : ""}
+            >
               SW
             </span>
           </button>
 
+
+          {/* Desktop CTA */}
           <Link
             to="/contact"
             className="navbar__cta"
@@ -105,34 +125,89 @@ function Navbar() {
                 : "Omba Huduma"}
             </span>
 
-            <ArrowUpRight size={17} strokeWidth={2.2} />
+            <ArrowUpRight
+              size={17}
+              strokeWidth={2.2}
+            />
           </Link>
 
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          className="navbar__menu-button"
-          onClick={() => setMenuOpen((current) => !current)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? (
-            <X size={24} />
-          ) : (
-            <Menu size={24} />
-          )}
-        </button>
+
+        {/* =====================================================
+            MOBILE ACTIONS
+            Language + Menu
+            ===================================================== */}
+        <div className="navbar__mobile-actions">
+
+          {/* Mobile Language Switcher */}
+          <button
+            type="button"
+            className="navbar__mobile-language-toggle"
+            onClick={toggleLanguage}
+            aria-label="Change website language"
+          >
+            <span
+              className={language === "en" ? "active" : ""}
+            >
+              EN
+            </span>
+
+            <span className="navbar__mobile-language-divider">
+              /
+            </span>
+
+            <span
+              className={language === "sw" ? "active" : ""}
+            >
+              SW
+            </span>
+          </button>
+
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            className="navbar__menu-button"
+            onClick={() =>
+              setMenuOpen((current) => !current)
+            }
+            aria-label={
+              menuOpen
+                ? "Close menu"
+                : "Open menu"
+            }
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? (
+              <X
+                size={24}
+                strokeWidth={2}
+              />
+            ) : (
+              <Menu
+                size={24}
+                strokeWidth={2}
+              />
+            )}
+          </button>
+
+        </div>
+
       </div>
 
-      {/* Mobile Navigation */}
+
+      {/* =====================================================
+          MOBILE NAVIGATION
+          ===================================================== */}
       {menuOpen && (
         <div className="navbar__mobile">
+
           <nav
             className="navbar__mobile-nav"
             aria-label="Mobile navigation"
           >
+
             {navigation.map((item) => (
               <NavLink
                 key={item.path}
@@ -160,34 +235,20 @@ function Navbar() {
               </NavLink>
             ))}
 
+
+            {/* Mobile Bottom CTA */}
             <div className="navbar__mobile-bottom">
-
-              <button
-                type="button"
-                className="navbar__mobile-language"
-                onClick={toggleLanguage}
-              >
-                <span>
-                  {language === "en"
-                    ? "Switch to Kiswahili"
-                    : "Switch to English"}
-                </span>
-
-                <span>
-                  {language === "en"
-                    ? "SW"
-                    : "EN"}
-                </span>
-              </button>
 
               <Link
                 to="/contact"
                 className="navbar__mobile-cta"
                 onClick={closeMenu}
               >
-                {language === "en"
-                  ? "Request Service"
-                  : "Omba Huduma"}
+                <span>
+                  {language === "en"
+                    ? "Request Service"
+                    : "Omba Huduma"}
+                </span>
 
                 <ArrowUpRight
                   size={19}
@@ -196,9 +257,12 @@ function Navbar() {
               </Link>
 
             </div>
+
           </nav>
+
         </div>
       )}
+
     </header>
   );
 }

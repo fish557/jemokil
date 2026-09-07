@@ -7,12 +7,14 @@
   --navbar-bg: #082d24;
   --navbar-bg-hover: #0a382d;
   --navbar-border: rgba(255, 255, 255, 0.09);
+
   --navbar-text: #ffffff;
   --navbar-text-muted: rgba(255, 255, 255, 0.68);
   --navbar-text-soft: rgba(255, 255, 255, 0.52);
 
   position: relative;
   z-index: 1000;
+
   width: 100%;
 
   background: var(--navbar-bg);
@@ -139,7 +141,6 @@
 
   left: 0;
   right: 0;
-
   bottom: 0;
 
   height: 2px;
@@ -163,7 +164,7 @@
 
 
 /* =========================================================
-   LANGUAGE SWITCHER
+   DESKTOP LANGUAGE SWITCHER
    ========================================================= */
 
 .navbar__language {
@@ -184,6 +185,8 @@
   letter-spacing: 0.03em;
 
   padding: 6px 0;
+
+  cursor: pointer;
 
   transition: color var(--transition-fast);
 }
@@ -242,6 +245,81 @@
 
 
 /* =========================================================
+   MOBILE ACTIONS
+   Language + Menu
+   ========================================================= */
+
+.navbar__mobile-actions {
+  display: none;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MOBILE LANGUAGE SWITCHER
+   ========================================================= */
+
+.navbar__mobile-language-toggle {
+  min-width: 88px;
+  height: 42px;
+
+  padding: 0 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  border: 1px solid rgba(8, 45, 36, 0.12);
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #082d24;
+
+  font-family: var(--font-body);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+
+.navbar__mobile-language-toggle:hover {
+  background: #f5f5f5;
+}
+
+
+.navbar__mobile-language-toggle .active {
+  color: #082d24;
+}
+
+
+.navbar__mobile-language-divider {
+  color: rgba(8, 45, 36, 0.38);
+}
+
+
+/* =========================================================
    MOBILE MENU BUTTON
    ========================================================= */
 
@@ -259,6 +337,8 @@
   background: transparent;
 
   color: var(--navbar-text);
+
+  cursor: pointer;
 
   transition:
     background var(--transition-fast),
@@ -300,7 +380,9 @@
 }
 
 
-/* Mobile Links */
+/* =========================================================
+   MOBILE LINKS
+   ========================================================= */
 
 .navbar__mobile-link {
   min-height: 58px;
@@ -350,35 +432,9 @@
 }
 
 
-/* Mobile Language */
-
-.navbar__mobile-language {
-  min-height: 50px;
-
-  padding-inline: 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border: 1px solid rgba(255, 255, 255, 0.13);
-
-  background: transparent;
-
-  color: var(--navbar-text);
-
-  font-size: 14px;
-}
-
-
-.navbar__mobile-language span:last-child {
-  color: var(--jemokil-orange);
-
-  font-weight: 700;
-}
-
-
-/* Mobile CTA */
+/* =========================================================
+   MOBILE CTA
+   ========================================================= */
 
 .navbar__mobile-cta {
   min-height: 52px;
@@ -427,7 +483,6 @@
   .navbar__cta {
     padding-inline: 14px;
   }
-
 }
 
 
@@ -447,6 +502,13 @@
   .navbar__nav,
   .navbar__actions {
     display: none;
+  }
+
+
+  /* Show Mobile Actions */
+
+  .navbar__mobile-actions {
+    display: flex;
   }
 
 
@@ -477,7 +539,6 @@
   .navbar__logo-text {
     font-size: 20px;
   }
-
 }
 
 
@@ -512,9 +573,29 @@
   }
 
 
+  /* Mobile Actions */
+
+  .navbar__mobile-actions {
+    gap: 8px;
+  }
+
+
+  /* Smaller Language Pill */
+
+  .navbar__mobile-language-toggle {
+    min-width: 82px;
+    height: 40px;
+
+    padding: 0 11px;
+
+    font-size: 12px;
+  }
+
+
+  /* Smaller Menu Button */
+
   .navbar__menu-button {
     width: 42px;
     height: 42px;
   }
-
 }
