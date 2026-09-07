@@ -1,0 +1,174 @@
+/* =========================================================
+   JEMOKIL — GLOBAL STYLES
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap");
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  min-width: 320px;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: var(--text-primary);
+  background: var(--jemokil-beige);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+
+p {
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+   ========================================================= */
+
+.container {
+  width: min(
+    calc(100% - 48px),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   GLOBAL SECTION
+   ========================================================= */
+
+.section {
+  padding-block: var(--section-space);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid var(--jemokil-orange);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
+
+::selection {
+  color: var(--jemokil-white);
+  background: var(--jemokil-orange);
+}
+
+
+/* =========================================================
+   SIMPLE UTILITY CLASSES
+   ========================================================= */
+
+.text-orange {
+  color: var(--jemokil-orange);
+}
+
+.text-lime {
+  color: var(--jemokil-lime);
+}
+
+.text-beige {
+  color: var(--jemokil-beige);
+}
+
+.text-white {
+  color: var(--jemokil-white);
+}
+
+.bg-black {
+  background: var(--jemokil-black);
+}
+
+.bg-beige {
+  background: var(--jemokil-beige);
+}
+
+.bg-orange {
+  background: var(--jemokil-orange);
+}

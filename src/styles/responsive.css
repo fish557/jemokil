@@ -1,0 +1,43 @@
+/* =========================================================
+   JEMOKIL — RESPONSIVE SYSTEM
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .container {
+    width: min(
+      calc(100% - 40px),
+      var(--container-width)
+    );
+  }
+
+  .section {
+    padding-block: var(--section-space-tablet);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .container {
+    width: min(
+      calc(100% - 32px),
+      var(--container-width)
+    );
+  }
+
+  .section {
+    padding-block: var(--section-space-mobile);
+  }
+
+  h1 {
+    letter-spacing: -0.045em;
+  }
+}

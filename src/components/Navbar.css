@@ -1,0 +1,520 @@
+/* =========================================================
+   JEMOKIL NAVBAR
+   Deep Forest Navigation
+   ========================================================= */
+
+.navbar {
+  --navbar-bg: #082d24;
+  --navbar-bg-hover: #0a382d;
+  --navbar-border: rgba(255, 255, 255, 0.09);
+  --navbar-text: #ffffff;
+  --navbar-text-muted: rgba(255, 255, 255, 0.68);
+  --navbar-text-soft: rgba(255, 255, 255, 0.52);
+
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+
+  border-bottom: 1px solid var(--navbar-border);
+}
+
+
+/* =========================================================
+   NAVBAR INNER
+   ========================================================= */
+
+.navbar__inner {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 32px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.navbar__logo {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 11px;
+
+  flex-shrink: 0;
+}
+
+
+/* Logo Mark */
+
+.navbar__logo-mark {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid var(--jemokil-orange);
+
+  color: var(--jemokil-orange);
+
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  background: transparent;
+}
+
+
+/* Logo Text */
+
+.navbar__logo-text {
+  font-family: var(--font-display);
+
+  font-size: 21px;
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  color: var(--navbar-text);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  margin-left: auto;
+}
+
+
+/* Navigation Links */
+
+.navbar__link {
+  position: relative;
+
+  padding: 8px 0;
+
+  color: var(--navbar-text-muted);
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: color var(--transition-fast);
+}
+
+
+.navbar__link:hover {
+  color: var(--navbar-text);
+}
+
+
+/* Active Link */
+
+.navbar__link--active {
+  color: var(--navbar-text);
+}
+
+
+/* Active Orange Indicator */
+
+.navbar__link--active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  height: 2px;
+
+  background: var(--jemokil-orange);
+}
+
+
+/* =========================================================
+   NAVBAR ACTIONS
+   ========================================================= */
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LANGUAGE SWITCHER
+   ========================================================= */
+
+.navbar__language {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--navbar-text-soft);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.03em;
+
+  padding: 6px 0;
+
+  transition: color var(--transition-fast);
+}
+
+
+.navbar__language:hover {
+  color: var(--navbar-text);
+}
+
+
+.navbar__language .active {
+  color: var(--navbar-text);
+}
+
+
+.navbar__language-divider {
+  opacity: 0.35;
+}
+
+
+/* =========================================================
+   REQUEST SERVICE CTA
+   ========================================================= */
+
+.navbar__cta {
+  min-height: 46px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  background: var(--jemokil-orange);
+
+  color: var(--jemokil-white);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border: 1px solid var(--jemokil-orange);
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+
+.navbar__cta:hover {
+  background: var(--jemokil-orange-dark);
+
+  border-color: var(--jemokil-orange-dark);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.navbar__menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  background: transparent;
+
+  color: var(--navbar-text);
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+
+.navbar__menu-button:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.navbar__mobile {
+  display: none;
+
+  background: var(--navbar-bg-hover);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* Mobile Navigation Container */
+
+.navbar__mobile-nav {
+  width: min(
+    calc(100% - 32px),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+
+  padding: 12px 0 24px;
+}
+
+
+/* Mobile Links */
+
+.navbar__mobile-link {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+
+  color: var(--navbar-text-muted);
+
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: color var(--transition-fast);
+}
+
+
+.navbar__mobile-link:hover {
+  color: var(--navbar-text);
+}
+
+
+/* Active Mobile Link */
+
+.navbar__mobile-link--active {
+  color: var(--navbar-text);
+}
+
+
+.navbar__mobile-link--active svg {
+  color: var(--jemokil-orange);
+}
+
+
+/* =========================================================
+   MOBILE BOTTOM ACTIONS
+   ========================================================= */
+
+.navbar__mobile-bottom {
+  display: grid;
+
+  gap: 12px;
+
+  padding-top: 22px;
+}
+
+
+/* Mobile Language */
+
+.navbar__mobile-language {
+  min-height: 50px;
+
+  padding-inline: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  background: transparent;
+
+  color: var(--navbar-text);
+
+  font-size: 14px;
+}
+
+
+.navbar__mobile-language span:last-child {
+  color: var(--jemokil-orange);
+
+  font-weight: 700;
+}
+
+
+/* Mobile CTA */
+
+.navbar__mobile-cta {
+  min-height: 52px;
+
+  padding-inline: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--jemokil-orange);
+
+  color: var(--jemokil-white);
+
+  font-weight: 600;
+
+  border: 1px solid var(--jemokil-orange);
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+
+.navbar__mobile-cta:hover {
+  background: var(--jemokil-orange-dark);
+
+  border-color: var(--jemokil-orange-dark);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar__nav {
+    gap: 20px;
+  }
+
+  .navbar__actions {
+    gap: 12px;
+  }
+
+  .navbar__cta {
+    padding-inline: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .navbar__inner {
+    min-height: 72px;
+  }
+
+
+  /* Hide Desktop Navigation */
+
+  .navbar__nav,
+  .navbar__actions {
+    display: none;
+  }
+
+
+  /* Show Mobile Menu Button */
+
+  .navbar__menu-button {
+    display: inline-flex;
+  }
+
+
+  /* Show Mobile Navigation */
+
+  .navbar__mobile {
+    display: block;
+  }
+
+
+  /* Slightly Smaller Logo */
+
+  .navbar__logo-mark {
+    width: 36px;
+    height: 36px;
+
+    font-size: 19px;
+  }
+
+
+  .navbar__logo-text {
+    font-size: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .navbar__inner {
+    min-height: 68px;
+  }
+
+
+  .navbar__logo {
+    gap: 9px;
+  }
+
+
+  .navbar__logo-mark {
+    width: 34px;
+    height: 34px;
+
+    border-width: 2px;
+
+    font-size: 18px;
+  }
+
+
+  .navbar__logo-text {
+    font-size: 19px;
+  }
+
+
+  .navbar__menu-button {
+    width: 42px;
+    height: 42px;
+  }
+
+}

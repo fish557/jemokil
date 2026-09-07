@@ -1,0 +1,110 @@
+/* ========================================
+   WHATSAPP FLOATING BUTTON
+======================================== */
+
+.whatsapp-button {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 1000;
+
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 18px;
+
+  background: #25d366;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+
+  font-family: var(--font-body);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.whatsapp-button:hover {
+  background: #20bd5a;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.whatsapp-button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 3px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 640px) {
+
+  .whatsapp-button {
+    right: 16px;
+    bottom: 16px;
+
+    width: 52px;
+    height: 52px;
+
+    min-height: 52px;
+
+    padding: 0;
+
+    border-radius: 50%;
+  }
+
+  .whatsapp-button span {
+    display: none;
+  }
+
+  .whatsapp-button svg {
+    width: 23px;
+    height: 23px;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+
+  .whatsapp-button {
+    right: 13px;
+    bottom: 13px;
+
+    width: 49px;
+    height: 49px;
+  }
+
+  .whatsapp-button svg {
+    width: 21px;
+    height: 21px;
+  }
+
+}

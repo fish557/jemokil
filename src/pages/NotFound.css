@@ -1,0 +1,358 @@
+/* ========================================
+   NOT FOUND PAGE
+======================================== */
+
+.not-found {
+  min-height: calc(100vh - 80px);
+  background: var(--jemokil-black);
+  color: var(--text-on-dark);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.not-found__hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(14, 73, 55, 0.98),
+      rgba(8, 45, 36, 0.98)
+    );
+}
+
+
+/* Subtle background structure */
+
+.not-found__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    transparent
+  );
+}
+
+
+/* Decorative orange block */
+
+.not-found__hero::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -160px;
+  bottom: -180px;
+
+  border: 1px solid rgba(255, 93, 0, 0.35);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.not-found__content {
+  position: relative;
+  z-index: 1;
+
+  width: min(760px, 100%);
+  padding: 110px 0;
+}
+
+
+/* ========================================
+   404 NUMBER
+======================================== */
+
+.not-found__code {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 13vw, 10rem);
+  font-weight: var(--weight-bold);
+  line-height: 0.8;
+  letter-spacing: -0.07em;
+
+  color: var(--jemokil-orange);
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.not-found__content .section-label {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 22px;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.not-found__content h1 {
+  margin: 0;
+
+  max-width: 720px;
+
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  font-weight: var(--weight-semibold);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+
+  color: var(--jemokil-white);
+}
+
+.not-found__content h1 span {
+  color: var(--jemokil-beige);
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.not-found__content p {
+  max-width: 600px;
+
+  margin: 30px 0 0;
+
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-weight: var(--weight-regular);
+  line-height: 1.7;
+
+  color: var(--text-on-dark-muted);
+}
+
+
+/* ========================================
+   ACTIONS
+======================================== */
+
+.not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 38px;
+}
+
+
+/* ========================================
+   PRIMARY BUTTON
+======================================== */
+
+.not-found__primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 54px;
+  padding: 0 22px;
+
+  border: 1px solid var(--jemokil-orange);
+  border-radius: var(--radius-pill);
+
+  background: var(--jemokil-orange);
+  color: var(--jemokil-white);
+
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.not-found__primary:hover {
+  background: var(--jemokil-orange-dark);
+  border-color: var(--jemokil-orange-dark);
+  color: var(--jemokil-white);
+}
+
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
+.not-found__secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 54px;
+  padding: 0 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+
+  background: transparent;
+  color: var(--jemokil-white);
+
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.not-found__secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--jemokil-white);
+}
+
+
+/* ========================================
+   FOCUS ACCESSIBILITY
+======================================== */
+
+.not-found__primary:focus-visible,
+.not-found__secondary:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .not-found__content {
+    padding: 90px 0;
+  }
+
+  .not-found__code {
+    font-size: clamp(5rem, 16vw, 8rem);
+  }
+
+  .not-found__content h1 {
+    font-size: clamp(2.8rem, 8vw, 4.8rem);
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+  .not-found {
+    min-height: calc(100vh - 72px);
+  }
+
+  .not-found__hero {
+    min-height: calc(100vh - 72px);
+  }
+
+  .not-found__content {
+    padding: 72px 0;
+  }
+
+  .not-found__hero::after {
+    width: 240px;
+    height: 240px;
+    right: -130px;
+    bottom: -120px;
+  }
+
+  .not-found__code {
+    margin-bottom: 18px;
+
+    font-size: clamp(4.5rem, 25vw, 7rem);
+  }
+
+  .not-found__content .section-label {
+    margin-bottom: 18px;
+  }
+
+  .not-found__content h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+    line-height: 0.98;
+  }
+
+  .not-found__content p {
+    margin-top: 24px;
+
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .not-found__actions {
+    align-items: stretch;
+    flex-direction: column;
+
+    margin-top: 32px;
+  }
+
+  .not-found__primary,
+  .not-found__secondary {
+    width: 100%;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+  .not-found__content {
+    padding: 60px 0;
+  }
+
+  .not-found__code {
+    font-size: 4.5rem;
+  }
+
+  .not-found__content h1 {
+    font-size: 2.5rem;
+  }
+}

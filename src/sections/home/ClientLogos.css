@@ -1,0 +1,436 @@
+/* ========================================
+   CLIENT LOGOS
+======================================== */
+
+.client-logos {
+  background: var(--jemokil-beige);
+  overflow: hidden;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.client-logos__header {
+  margin-bottom: 52px;
+}
+
+.client-logos__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: var(--jemokil-orange);
+
+  font-size: 12px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.14em;
+}
+
+.client-logos__eyebrow-line {
+  width: 34px;
+  height: 2px;
+
+  flex-shrink: 0;
+
+  background: var(--jemokil-orange);
+}
+
+.client-logos__heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+
+  gap: 70px;
+  align-items: end;
+}
+
+.client-logos__title {
+  margin: 0;
+
+  font-size: clamp(46px, 5.8vw, 78px);
+  line-height: 0.97;
+
+  color: var(--text-primary);
+}
+
+.client-logos__title span {
+  color: var(--jemokil-orange);
+}
+
+.client-logos__intro {
+  max-width: 450px;
+  justify-self: end;
+}
+
+.client-logos__intro p {
+  margin: 0;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   LOGO PANEL
+======================================== */
+
+.client-logos__panel {
+  overflow: hidden;
+
+  background: var(--jemokil-white);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.client-logos__panel-top {
+  min-height: 58px;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.client-logos__panel-top > span:first-child {
+  color: var(--jemokil-black);
+
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.13em;
+}
+
+.client-logos__panel-note {
+  color: var(--text-muted);
+
+  font-size: 10px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+   LOGO GRID
+======================================== */
+
+.client-logos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* ========================================
+   LOGO CELL
+======================================== */
+
+.client-logo {
+  min-height: 175px;
+  padding: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  background: var(--jemokil-white);
+}
+
+
+/* Remove right border from every 3rd item */
+
+.client-logo:nth-child(3n) {
+  border-right: none;
+}
+
+
+/* Remove bottom border from final row */
+
+.client-logo:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+
+/* ========================================
+   CLIENT LOGO IMAGE
+======================================== */
+
+.client-logo img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 210px;
+  max-height: 90px;
+
+  object-fit: contain;
+
+  /* Prevent logos from becoming visually tiny
+     because of a restrictive image box */
+}
+
+
+/* ========================================
+   LOGO SIZE VARIATIONS
+======================================== */
+
+/*
+   Some company logos are naturally very wide,
+   while others are square or compact.
+
+   This keeps wide logos from becoming too large
+   while allowing compact logos to appear clearly.
+*/
+
+.client-logo img[src*="client-01"] {
+  max-width: 205px;
+  max-height: 95px;
+}
+
+.client-logo img[src*="client-02"] {
+  max-width: 210px;
+  max-height: 95px;
+}
+
+.client-logo img[src*="client-03"] {
+  max-width: 210px;
+  max-height: 90px;
+}
+
+.client-logo img[src*="client-04"] {
+  max-width: 210px;
+  max-height: 90px;
+}
+
+.client-logo img[src*="client-05"] {
+  max-width: 210px;
+  max-height: 95px;
+}
+
+.client-logo img[src*="client-06"] {
+  max-width: 210px;
+  max-height: 95px;
+}
+
+
+/* ========================================
+   BOTTOM CTA
+======================================== */
+
+.client-logos__bottom {
+  margin-top: 22px;
+  padding: 28px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  background: var(--jemokil-black);
+  color: var(--jemokil-white);
+}
+
+.client-logos__bottom > div {
+  min-width: 0;
+}
+
+.client-logos__bottom span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--jemokil-orange);
+
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.13em;
+}
+
+.client-logos__bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.client-logos__button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 14px 19px;
+
+  background: var(--jemokil-orange);
+  color: var(--jemokil-white);
+
+  font-size: 13px;
+  font-weight: var(--weight-semibold);
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.client-logos__button:hover {
+  background: var(--jemokil-white);
+  color: var(--jemokil-black);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
+  .client-logos__heading-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .client-logos__intro {
+    justify-self: start;
+    max-width: 650px;
+  }
+
+  .client-logos__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Reset desktop 3-column borders */
+
+  .client-logo:nth-child(3n) {
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .client-logo:nth-child(2n) {
+    border-right: none;
+  }
+
+  .client-logo:nth-last-child(-n + 3) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .client-logo:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .client-logo {
+    min-height: 165px;
+    padding: 30px;
+  }
+
+  .client-logo img {
+    max-width: 190px;
+    max-height: 85px;
+  }
+
+  .client-logos__bottom {
+    padding: 26px 28px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+  .client-logos__header {
+    margin-bottom: 38px;
+  }
+
+  .client-logos__title {
+    font-size: clamp(43px, 12vw, 58px);
+  }
+
+  .client-logos__panel-top {
+    min-height: 52px;
+    padding: 0 16px;
+  }
+
+  .client-logos__panel-top > span:first-child {
+    font-size: 10px;
+  }
+
+  .client-logos__panel-note {
+    font-size: 9px;
+  }
+
+  .client-logos__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .client-logo {
+    min-height: 135px;
+    padding: 22px 15px;
+  }
+
+  .client-logo img {
+    max-width: 145px;
+    max-height: 65px;
+  }
+
+
+  /* Bottom CTA */
+
+  .client-logos__bottom {
+    margin-top: 16px;
+    padding: 24px 20px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+  .client-logos__button {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+  .client-logo {
+    min-height: 120px;
+    padding: 18px 10px;
+  }
+
+  .client-logo img {
+    max-width: 125px;
+    max-height: 58px;
+  }
+
+  .client-logos__panel-top {
+    padding: 0 13px;
+  }
+
+  .client-logos__panel-note {
+    display: none;
+  }
+}

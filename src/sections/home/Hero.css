@@ -1,0 +1,575 @@
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 82px);
+
+  display: flex;
+  align-items: center;
+
+  background: var(--jemokil-black);
+  color: var(--jemokil-white);
+}
+
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__background-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 45, 36, 0.97) 0%,
+      rgba(8, 45, 36, 0.91) 34%,
+      rgba(8, 45, 36, 0.72) 68%,
+      rgba(8, 45, 36, 0.58) 100%
+    );
+}
+
+
+/* ========================================
+   GRID PATTERN
+======================================== */
+
+.hero__grid-pattern {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.055;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.45) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.45) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.hero__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(
+    calc(100% - 48px),
+    var(--container-width)
+  );
+
+  min-height: calc(100vh - 82px);
+
+  display: flex;
+  align-items: center;
+
+  padding-block: 80px;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+
+  max-width: 850px;
+}
+
+
+/* ========================================
+   EYEBROW
+======================================== */
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 28px;
+
+  color: var(--jemokil-lime);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.hero__eyebrow-line {
+  width: 32px;
+  height: 2px;
+
+  display: block;
+
+  background: var(--jemokil-orange);
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.hero__title {
+  max-width: 900px;
+
+  margin-bottom: 30px;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(
+    64px,
+    7.5vw,
+    108px
+  );
+
+  font-weight: 600;
+
+  letter-spacing: -0.06em;
+
+  line-height: 0.9;
+}
+
+.hero__title span {
+  color: var(--jemokil-orange);
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero__description {
+  max-width: 650px;
+
+  margin-bottom: 36px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 18px;
+
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   ACTIONS
+======================================== */
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 48px;
+}
+
+.hero__primary-button {
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding-inline: 21px;
+
+  background: var(--jemokil-orange);
+
+  border: 1px solid var(--jemokil-orange);
+
+  color: var(--jemokil-white);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.hero__primary-button:hover {
+  background: var(--jemokil-orange-dark);
+  border-color: var(--jemokil-orange-dark);
+}
+
+
+/* ========================================
+   SERVICE COVERAGE
+======================================== */
+
+.hero__coverage {
+  max-width: 680px;
+
+  display: flex;
+  align-items: stretch;
+
+  gap: 15px;
+
+  padding-top: 23px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero__coverage-line {
+  width: 3px;
+
+  flex: 0 0 3px;
+
+  background: var(--jemokil-lime);
+}
+
+.hero__coverage-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.hero__coverage-label {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.hero__coverage p {
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   SCROLL INDICATOR
+======================================== */
+
+.hero__scroll {
+  position: absolute;
+
+  z-index: 4;
+
+  right: 30px;
+  bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+.hero__scroll svg {
+  color: var(--jemokil-orange);
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+======================================== */
+
+@media (min-width: 1400px) {
+
+  .hero__container {
+    padding-block: 90px;
+  }
+
+  .hero__title {
+    font-size: clamp(
+      78px,
+      7vw,
+      112px
+    );
+  }
+
+  .hero__description {
+    font-size: 19px;
+  }
+
+}
+
+
+/* ========================================
+   TABLET / SMALL DESKTOP
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .hero__container {
+    padding-block: 70px;
+  }
+
+  .hero__title {
+    font-size: clamp(
+      60px,
+      8vw,
+      90px
+    );
+  }
+
+  .hero__content {
+    max-width: 760px;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8, 45, 36, 0.96) 0%,
+        rgba(8, 45, 36, 0.82) 55%,
+        rgba(8, 45, 36, 0.68) 100%
+      );
+  }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero__container {
+    min-height: calc(100vh - 72px);
+
+    align-items: center;
+
+    padding-block: 80px;
+  }
+
+  .hero__content {
+    max-width: 720px;
+  }
+
+  .hero__background-image {
+    object-position: center;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 640px) {
+
+  .hero {
+    min-height: calc(100svh - 68px);
+  }
+
+  .hero__container {
+    width: min(
+      calc(100% - 32px),
+      var(--container-width)
+    );
+
+    min-height: calc(100svh - 68px);
+
+    padding-block: 60px 70px;
+  }
+
+
+  /* Stronger mobile overlay */
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(8, 45, 36, 0.96) 0%,
+        rgba(8, 45, 36, 0.89) 100%
+      );
+  }
+
+
+  .hero__background-image {
+    object-position: center;
+  }
+
+
+  /* Eyebrow */
+
+  .hero__eyebrow {
+    gap: 9px;
+
+    margin-bottom: 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.1em;
+  }
+
+  .hero__eyebrow-line {
+    width: 24px;
+  }
+
+
+  /* Heading */
+
+  .hero__title {
+    margin-bottom: 24px;
+
+    font-size: clamp(
+      52px,
+      15vw,
+      72px
+    );
+
+    line-height: 0.92;
+  }
+
+
+  /* Description */
+
+  .hero__description {
+    max-width: 580px;
+
+    margin-bottom: 30px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+
+  /* CTA */
+
+  .hero__actions {
+    margin-bottom: 38px;
+  }
+
+  .hero__primary-button {
+    width: 100%;
+
+    min-height: 53px;
+  }
+
+
+  /* Coverage */
+
+  .hero__coverage {
+    gap: 12px;
+
+    padding-top: 20px;
+  }
+
+  .hero__coverage-line {
+    width: 2px;
+
+    flex-basis: 2px;
+  }
+
+  .hero__coverage-label {
+    font-size: 9px;
+  }
+
+  .hero__coverage p {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Scroll */
+
+  .hero__scroll {
+    right: 16px;
+    bottom: 18px;
+
+    font-size: 8px;
+  }
+
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+
+  .hero__container {
+    width: calc(100% - 28px);
+
+    padding-block: 52px 64px;
+  }
+
+  .hero__title {
+    font-size: 49px;
+  }
+
+  .hero__description {
+    font-size: 15px;
+  }
+
+  .hero__coverage p {
+    font-size: 10px;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+}

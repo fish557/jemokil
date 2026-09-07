@@ -1,0 +1,83 @@
+:root {
+  /* ========================================
+     JEMOKIL BRAND COLORS
+  ======================================== */
+
+  --jemokil-black: #0e4937;
+  --jemokil-black-soft: #0a3a2c;
+
+  --jemokil-orange: #ff5d00;
+  --jemokil-orange-dark: #df4f00;
+
+  --jemokil-beige: #fbe9d1;
+  --jemokil-beige-soft: #fff6e9;
+
+  --jemokil-lime: #72bf00;
+  --jemokil-lime-dark: #5f9f00;
+
+  --jemokil-white: #ffffff;
+
+  /* ========================================
+     TEXT
+  ======================================== */
+
+  --text-primary: #111111;
+  --text-secondary: #5f5f5f;
+  --text-muted: #858585;
+
+  --text-on-dark: #ffffff;
+  --text-on-dark-muted: rgba(255, 255, 255, 0.78);
+
+  /* ========================================
+     BORDERS
+  ======================================== */
+
+  --border-light: rgba(14, 73, 55, 0.12);
+  --border-medium: rgba(14, 73, 55, 0.18);
+  --border-dark: rgba(255, 255, 255, 0.15);
+
+  /* ========================================
+     TYPOGRAPHY
+  ======================================== */
+
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Instrument Sans", sans-serif;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ========================================
+     BORDER RADIUS
+  ======================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* ========================================
+     LAYOUT
+  ======================================== */
+
+  --container-width: 1280px;
+
+  --section-space: 110px;
+  --section-space-tablet: 85px;
+  --section-space-mobile: 64px;
+
+  /* ========================================
+     SHADOWS
+  ======================================== */
+
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.14);
+
+  /* ========================================
+     TRANSITIONS
+  ======================================== */
+
+  --transition-fast: 180ms ease;
+}

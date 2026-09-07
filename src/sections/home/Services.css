@@ -1,0 +1,559 @@
+/* =========================================================
+   JEMOKIL SERVICES
+   ========================================================= */
+
+.services {
+  position: relative;
+  background: var(--jemokil-beige);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.services__header {
+  margin-bottom: 62px;
+}
+
+.services__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 25px;
+
+  color: var(--jemokil-orange);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.services__eyebrow-line {
+  width: 28px;
+  height: 2px;
+  background: var(--jemokil-orange);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.services__heading-row {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(300px, 0.65fr);
+
+  gap: 80px;
+  align-items: end;
+}
+
+.services__title {
+  max-width: 760px;
+
+  font-size: clamp(54px, 6vw, 88px);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.services__title span {
+  color: var(--jemokil-orange);
+}
+
+.services__intro {
+  max-width: 460px;
+  padding-bottom: 5px;
+}
+
+.services__intro p {
+  margin-bottom: 22px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   VIEW SERVICES LINK
+   ========================================================= */
+
+.services__view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--jemokil-black);
+
+  color: var(--jemokil-black);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.services__view-link:hover {
+  color: var(--jemokil-orange);
+  border-color: var(--jemokil-orange);
+}
+
+
+/* =========================================================
+   SERVICE GRID
+   ========================================================= */
+
+.services__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.service-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+
+  background: var(--jemokil-white);
+
+  border: 1px solid rgba(0, 0, 0, 0.09);
+
+  overflow: hidden;
+
+  transition:
+    border-color var(--transition-fast);
+}
+
+.service-card:hover {
+  border-color: rgba(14, 73, 55, 0.32);
+}
+
+
+/* =========================================================
+   FEATURED CARD
+   ========================================================= */
+
+.service-card--featured {
+  background: #0E4937;
+  color: var(--jemokil-white);
+
+  border-color: #0E4937;
+}
+
+.service-card--featured:hover {
+  border-color: #0E4937;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+   ========================================================= */
+
+.service-card__image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 310px;
+
+  overflow: hidden;
+
+  background: #d9d4ca;
+}
+
+.service-card__image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   ========================================================= */
+
+.service-card__image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.28) 0%,
+      rgba(0, 0, 0, 0.03) 42%,
+      rgba(0, 0, 0, 0.34) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE TOP CONTENT
+   ========================================================= */
+
+.service-card__image-top {
+  position: absolute;
+
+  top: 22px;
+  left: 22px;
+  right: 22px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.service-card__number {
+  font-family: var(--font-display);
+
+  color: var(--jemokil-white);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.service-card__icon {
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--jemokil-orange);
+  color: var(--jemokil-white);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.service-card__content {
+  flex: 1;
+
+  padding: 28px 28px 0;
+}
+
+.service-card__content h3 {
+  max-width: 520px;
+
+  margin-bottom: 13px;
+
+  font-size: clamp(27px, 2.5vw, 36px);
+  font-weight: 600;
+
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.service-card__content p {
+  max-width: 550px;
+
+  margin-bottom: 22px;
+
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.service-card--featured .service-card__content p {
+  color: rgba(255, 255, 255, 0.67);
+}
+
+
+/* =========================================================
+   SERVICE EXAMPLES
+   ========================================================= */
+
+.service-card__list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px 20px;
+}
+
+.service-card__list li {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.service-card--featured .service-card__list li {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.service-card__list li span {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 5px;
+
+  background: var(--jemokil-orange);
+}
+
+.service-card--featured .service-card__list li span {
+  background: var(--jemokil-lime);
+}
+
+
+/* =========================================================
+   CARD LINK
+   ========================================================= */
+
+.service-card__link {
+  min-height: 58px;
+
+  margin: 25px 28px 0;
+  padding-top: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.11);
+
+  color: var(--jemokil-black);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: color var(--transition-fast);
+}
+
+.service-card__link:hover {
+  color: var(--jemokil-orange);
+}
+
+.service-card--featured .service-card__link {
+  border-color: rgba(255, 255, 255, 0.14);
+
+  color: var(--jemokil-white);
+}
+
+.service-card--featured .service-card__link:hover {
+  color: var(--jemokil-orange);
+}
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+   ========================================================= */
+
+.services__bottom {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin-top: 55px;
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.services__bottom-mark {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  flex: 0 0 auto;
+}
+
+.services__bottom-mark span {
+  width: 7px;
+  height: 7px;
+
+  background: var(--jemokil-orange);
+}
+
+.services__bottom-mark span:nth-child(2) {
+  background: var(--jemokil-lime);
+}
+
+.services__bottom-mark span:nth-child(3) {
+  background: var(--jemokil-orange);
+}
+
+.services__bottom p {
+  max-width: 900px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .services__heading-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .services__intro {
+    max-width: 650px;
+  }
+
+  .service-card__image-wrapper {
+    height: 280px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .services__header {
+    margin-bottom: 42px;
+  }
+
+  .services__eyebrow {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .services__title {
+    font-size: clamp(48px, 14vw, 68px);
+    line-height: 0.94;
+  }
+
+  .services__intro p {
+    font-size: 15px;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card__image-wrapper {
+    height: 260px;
+  }
+
+  .service-card__image-top {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .service-card__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .service-card__content {
+    padding: 23px 22px 0;
+  }
+
+  .service-card__content h3 {
+    font-size: 27px;
+  }
+
+  .service-card__content p {
+    font-size: 13px;
+  }
+
+  .service-card__list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .service-card__link {
+    margin: 25px 22px 0;
+  }
+
+  .services__bottom {
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+
+  .services__bottom p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .service-card__image-wrapper {
+    height: 230px;
+  }
+
+  .service-card__content {
+    padding: 20px 19px 0;
+  }
+
+  .service-card__content h3 {
+    font-size: 24px;
+  }
+
+  .service-card__number {
+    font-size: 11px;
+  }
+
+  .service-card__link {
+    margin-inline: 19px;
+  }
+}
