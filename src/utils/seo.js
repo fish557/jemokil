@@ -1,6 +1,6 @@
 import faqs from "../data/faqs";
 
-const SITE_URL = "https://jemokil.com";
+const SITE_URL = "https://www.jemokil.com";
 const SITE_NAME = "JEMOKIL";
 
 const defaultSEO = {
